@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import HomeMain from "../components/HomeMain";
 import HomeTopbar from "../components/HomeTopbar";
+import { home } from "../routecomponent/home.css";
 
 function Home() {
   const [load, setLoad] = useState(true); //로딩
@@ -20,13 +21,13 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="big-box">
       {load ? (
-        <h1>loading...</h1>
+        <h1 className="load">loading...</h1>
       ) : (
         <div>
           <HomeTopbar />
-          <main>
+          <main className="movies-list">
             {movies.map((movie) => (
               <HomeMain
                 key={movie.id} //map함수 사용할 때에는 key값 반드시 필요

@@ -1,21 +1,33 @@
-import { FaAlignJustify } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FiTwitter } from "react-icons/fi";
+import { FaAlignJustify, FaSearch, FaBars, FaPlus } from "react-icons/fa";
+import { MdAnnouncement } from "react-icons/md";
+//import { FaInstagram } from "react-icons/fa";
+//import { FiTwitter } from "react-icons/fi";
+import { Topbar } from "./CSS/Topbar.css";
 
 /**상단 바*/
 function HomeTopbar() {
   return (
-    <div>
-      <div>
-        <FaAlignJustify size="24" />
+    <div className="top-bar-box">
+      <div className="left-box">
+        <h1>The Movies!</h1>
       </div>
-      <h1>The Movies!</h1>
-      <div>
-        <div>
-          <FiTwitter size="20" />
+
+      <div className="right-box">
+        <div className="option-box">
+          <FaSearch />
+          <h3>Search</h3>
         </div>
-        <div>
-          <FaInstagram size="20" />
+        <div className="option-box">
+          <FaBars />
+          <h3>Menu</h3>
+        </div>
+        <div className="option-box">
+          <FaPlus />
+          <h3>About</h3>
+        </div>
+        <div className="option-box">
+          <MdAnnouncement />
+          <h3>Feedback</h3>
         </div>
       </div>
     </div>

@@ -1,0 +1,31 @@
+.top-bar-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #252525;
+  width: 100%;
+  margin-bottom: 60px;
+  color: white;
+}
+
+.left-box {
+  margin-left: 15px;
+}
+
+.left-box h1 {
+  font-size: 35px;
+}
+
+.right-box {
+  display: flex;
+}
+
+.option-box {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.option-box h3 {
+  margin-left: 5px;
+}

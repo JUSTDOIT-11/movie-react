@@ -1,0 +1,32 @@
+.load {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: -60px;
+}
+
+.movies-list {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.movies-list::-webkit-scrollbar {
+  height: 20px;
+}
+
+.movies-list::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 5px solid transparent;
+  background-clip: content-box;
+}
+
+.movies-list::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: #252525;
+  height: 60px;
+}
+
+.movies-list div:first-child {
+  margin-left: 5px;
+}

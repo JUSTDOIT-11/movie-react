@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import MovieDetail from "../components/MovieDetail";
+
 /**영화 상세 정보창 */
-function Detail() {
+function MovieInfo() {
   const [load, setLoad] = useState(true); //로딩
   const [movie, setMovie] = useState([]); //영화 한 편의 정보 배열
   const { id } = useParams(); //{id} = id를 오브젝트가 아니라 string으로 받아오기 위함.
@@ -24,21 +26,19 @@ function Detail() {
         <h1>loading...</h1>
       ) : (
         movie.map((movie) => (
-          <div key={movie.id}>
-            <img src={movie.large_cover_image} />
-            <h1>{movie.title}</h1>
-            <h3>{movie.rating}</h3>
-            {movie.genres.map((genre) => (
-              <div key={genre}>
-                <h4>{genre}</h4>
-              </div>
-            ))}
-            <p>{movie.description_intro}</p>
-          </div>
+          <MovieDetail
+            key={movie.id}
+            img={movie.large_cover_image}
+            title={movie.title}
+            rating={movie.rating}
+            genres={movie.genres}
+            description={movie.description_intro}
+            url={movie.url}
+          />
         ))
       )}
     </div>
   );
 }
 
-export default Detail;
+export default MovieInfo;
