@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import Loading from "../components/Loading";
 import MovieDetail from "../components/MovieDetail";
 
 /**영화 상세 정보창 */
@@ -21,9 +22,9 @@ function MovieInfo() {
   }, []);
 
   return (
-    <div>
+    <div className="movie-info-box">
       {load ? (
-        <h1>loading...</h1>
+        <Loading />
       ) : (
         movie.map((movie) => (
           <MovieDetail

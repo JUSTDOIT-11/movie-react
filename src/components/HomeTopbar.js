@@ -6,10 +6,12 @@ import { Topbar } from "./CSS/Topbar.css";
 
 /**상단 바*/
 function HomeTopbar() {
+  const titleClick = () => window.location.reload();
+
   return (
     <div className="top-bar-box">
       <div className="left-box">
-        <h1>The Movies!</h1>
+        <h1 onClick={titleClick}>The Movies!</h1>
       </div>
 
       <div className="right-box">

@@ -2,6 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./routecomponent/Home";
 import MovieInfo from "./routecomponent/MovieInfo";
+import reset from "./reset.css";
 
 function App() {
   return (

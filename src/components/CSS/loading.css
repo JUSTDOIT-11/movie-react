@@ -1,0 +1,43 @@
+.loading-bars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), #252525, rgba(0, 0, 0, 0.2));
+}
+
+@keyframes loading-animation {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.square {
+  width: 35px;
+  height: 180px;
+  background-color: white;
+  margin-right: 10px;
+  animation: loading-animation 0.8s ease-in-out;
+}
+
+.square-b {
+  animation-delay: 0.1s;
+}
+
+.square-c {
+  animation-delay: 0.2s;
+}
+
+.square-d {
+  animation-delay: 0.3s;
+}
+
+.square-e {
+  animation-delay: 0.4s;
+}

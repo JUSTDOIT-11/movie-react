@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import HomeMain from "../components/HomeMain";
 import HomeTopbar from "../components/HomeTopbar";
+import Loading from "../components/Loading";
 import { home } from "../routecomponent/home.css";
 
 function Home() {
@@ -23,19 +24,20 @@ function Home() {
   return (
     <div className="big-box">
       {load ? (
-        <h1 className="load">loading...</h1>
+        <Loading />
       ) : (
         <div>
           <HomeTopbar />
-          <main className="movies-list">
+          <article className="movies-list">
             {movies.map((movie) => (
               <HomeMain
                 key={movie.id} //map함수 사용할 때에는 key값 반드시 필요
                 id={movie.id}
                 coverImg={movie.medium_cover_image}
+                title={movie.title}
               />
             ))}
-          </main>
+          </article>
         </div>
       )}
     </div>

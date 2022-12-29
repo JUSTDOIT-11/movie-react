@@ -12,18 +12,31 @@
   margin-left: 15px;
 }
 
+.left-box:hover {
+  cursor: pointer;
+}
+
 .left-box h1 {
   font-size: 35px;
+  text-shadow: yellow 2px 0px 10px;
 }
 
 .right-box {
   display: flex;
 }
 
+.right-box:hover > :not(:hover) {
+  opacity: 0.4;
+}
+
 .option-box {
   display: flex;
   align-items: center;
   margin-right: 40px;
+}
+
+.option-box:hover {
+  cursor: pointer;
 }
 
 .option-box h3 {

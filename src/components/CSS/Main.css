@@ -1,8 +1,32 @@
 .movie-post {
+  display: flex;
+  align-items: center;
   margin-right: 5px;
+  height: 500px;
 }
 
 .movie-post-inside-box {
   margin-bottom: 8px;
   margin-right: 5px;
+}
+
+.post {
+  transition: all 0.2s ease;
+  box-shadow: 3px 3px 5px #252525;
+}
+
+.post:hover {
+  transform: scale(1.1);
+}
+
+.movie-title {
+  height: 30px;
+  color: #252525;
+  text-align: center;
+  height: 70px;
+  margin-top: -3px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
